@@ -1,0 +1,24 @@
+Start:
+TextWindow.Write("Do you like Math?:")
+math=TextWindow.Read()
+If math="Yes"Then
+  TextWindow.WriteLine("Yuck! I hate it!")
+  ElseIf math="No"Then
+  TextWindow.WriteLine("Me neither, but let's try something!")
+Else
+  TextWindow.WriteLine("I see you can't respond to a simple 'yes' or 'no' question. Try again!")
+  Goto Start
+EndIf
+Next:
+TextWindow.Write("Give me a number with a decimal point:")
+Number=TextWindow.ReadNumber()
+TextWindow.Write("Cool. Let's round it! ")
+Program.Delay(2000)
+TextWindow.Write("The result is:"+Math.Round(Number)+".")
+Remainder=Math.Remainder(Math.Round(Number),2)
+If (Remainder=0) Then
+  TextWindow.WriteLine(" It's even!")
+Else
+  TextWindow.WriteLine(" It's odd!")
+EndIf 
+TextWindow.WriteLine("FYI, The ceiling of 7.654 is:"+math.Ceiling(7.654))

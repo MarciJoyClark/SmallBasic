@@ -1,0 +1,32 @@
+TextWindow.WriteLine("Hello! Your current time is:" +Clock.Time) 
+start:
+TextWindow.WriteLine("Which station are you inquiring about? Please enter NYC, or London. Input:")
+Input=TextWindow.Read()
+
+If (Input="London") then  
+ program1()
+ElseIf (Input="NYC") then 
+ program2()
+Endif
+
+ LT:
+ Sub program1
+  LT=(Clock.Hour +8)*100
+  If (LT >=2100) Then
+  TextWindow.WriteLine("The London Station is closed.")
+  ElseIf (LT >=0900) Then
+  TextWindow.WriteLine("The London Station is open.")
+EndIf 
+EndSub
+Goto start
+
+NT:
+Sub program2
+NT=(Clock.Hour +3)*100
+If (NT >=2100) Then
+  TextWindow.WriteLine("The New York Station is closed.")
+  ElseIf (NT >=0900) Then
+  TextWindow.WriteLine("The New York Station is open.")
+EndIf  
+EndSub
+Goto start

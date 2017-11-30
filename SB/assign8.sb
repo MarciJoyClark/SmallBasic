@@ -1,0 +1,19 @@
+GraphicsWindow.Height=500
+GraphicsWindow.Width=500
+GraphicsWindow.BackgroundColor="Purple"
+GraphicsWindow.PenColor="Green"
+GraphicsWindow.FontItalic="True"
+For A=1 To 11
+  GraphicsWindow.PenWidth=A
+  GraphicsWindow.DrawLine(50, A*10, 400, A*10)
+EndFor
+GraphicsWindow.SetPixel(20, 20, "Black")
+GraphicsWindow.SetPixel(30, 30, "Red")
+GraphicsWindow.SetPixel(40, 40, "White")
+GraphicsWindow.SetPixel(50, 50, "Blue")
+GraphicsWindow.SetPixel(60, 60, "Pink")
+GraphicsWindow.SetPixel(70, 70, "Yellow")
+GraphicsWindow.DrawBoundText(1, 100, 70 "Blue!")
+GraphicsWindow.FontItalic="False"
+GraphicsWindow.FontBold="True"
+GraphicsWindow.DrawBoundText(50, 135, 100 "END")

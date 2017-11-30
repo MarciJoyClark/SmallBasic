@@ -1,0 +1,33 @@
+TextWindow.BackgroundColor="black"
+TextWindow.Write("We're going to make some noise! Ready? ")
+TextWindow.Read()
+TextWindow.Write("You'll choose 3 numbers under 10 and I'll ding if you do it right!! ")
+Sound()
+Sub Sound
+  Start:
+TextWindow.Write("Okay, choose your first number. ")
+Number_1=TextWindow.ReadNumber()
+If (Number_1<10)Then
+  Sound.PlayChime()
+  TextWindow.Write("Cool. Pick another!")
+  Number_2=TextWindow.ReadNumber()
+  ElseIf (Number_1>9) Then
+  TextWindow.Write("Under 10, buddy! Try again. ")
+  GoTo Start
+  EndIf
+      If (Number_2<10)Then
+      Sound.PlayChime()
+      TextWindow.Write("Cool. One More!")
+      Number_3=TextWindow.ReadNumber()
+      ElseIf (Number_2>9) Then
+      TextWindow.Write("Under 10, buddy! Try again. ")
+      GoTo Start
+      EndIf
+          If (Number_3<10) Then
+          Sound.PlayChime()
+          TextWindow.Write("Cool, right?")
+          ElseIf (Number_3>9) Then
+          TextWindow.Write("Under 10, buddy! Try again. ")
+          GoTo Start
+        EndIf
+        EndSub

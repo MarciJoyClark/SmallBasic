@@ -1,0 +1,38 @@
+GraphicsWindow.MouseDown=MouseClick
+GraphicsWindow.MouseMove=MouseDrag
+GraphicsWindow.MouseUp=MouseUp
+Sub MouseClick
+  OrgX=GraphicsWindow.MouseX
+  OrgY=GraphicsWindow.MouseY
+EndSub
+Sub MouseDrag
+X=GraphicsWindow.MouseX
+Y=GraphicsWindow.MouseY
+  If (Mouse.IsLeftButtonDown) Then
+  GraphicsWindow.PenColor = GraphicsWindow.GetRandomColor()
+  GraphicsWindow.DrawLine(OrgX,OrgY, X, Y)
+  
+    ElseIf (Mouse.IsRightButtonDown) Then
+    GraphicsWindow.PenColor="Black"
+    GraphicsWindow.DrawLine(OrgX, OrgY, X, Y)    
+ EndIf
+ EndSub
+Sub MouseUp
+   GraphicsWindow.PenColor=GraphicsWindow.GetColorFromRGB(1,3,7)
+   GraphicsWindow.PenWidth=(10)
+ EndSub 'Hold left mouse button for rainbow; right for black
+ 
+esc="Escape" 
+return="Return"
+GraphicsWindow.KeyDown=keydown
+GraphicsWindow.KeyUp=keyup
+Sub keydown
+  If GraphicsWindow.LastKey=return then
+    GraphicsWindow.ShowMessage("Click the Mouse, or nothing is gonna happen!","Hey!")
+  EndIf
+EndSub
+Sub keyup
+  If GraphicsWindow.LastKey=esc then
+    GraphicsWindow.ShowMessage("Leaving so soon?","Hey!")
+  EndIf
+EndSub

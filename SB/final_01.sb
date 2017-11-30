@@ -1,0 +1,11 @@
+TextWindow.WriteLine("Let me help you find the smaller of two numbers!")
+TextWindow.WriteLine("Enter the first number:")
+Number1 = TextWindow.Read()
+TextWindow.WriteLine("Enter the second number:")
+Number2 = TextWindow.Read()
+min = Math.Min(Number1, Number2)
+If (Number1 = Number2) Then
+  TextWindow.WriteLine("The're the same!")
+Else  
+  TextWindow.WriteLine("The smaller one is:" + min) 
+EndIf

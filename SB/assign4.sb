@@ -1,0 +1,3 @@
+If(23<25)Then
+  TextWindow.WriteLine("23 is less than 25.")
+EndIf

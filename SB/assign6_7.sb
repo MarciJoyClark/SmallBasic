@@ -1,0 +1,14 @@
+For A=100 To 1 Step -1
+  TextWindow.WriteLine(A)
+  Program.Delay(100)
+EndFor
+TextWindow.WriteLine("Let's see how many times you can mulitply by 7 before you reach 59,000!")
+A=7
+Start:
+Amount=7
+While (Amount <59000)
+TextWindow.WriteLine(Amount)
+Amount=Amount*7
+EndWhile
+
+  

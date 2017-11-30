@@ -1,0 +1,14 @@
+GraphicsWindow.PenColor=GraphicsWindow.GetRandomColor()
+GraphicsWindow.BackgroundColor="Gray"
+Turtle.X = 200
+Turtle.Y = 200
+Start:
+For X=1 To 1
+Turtle.Move(100)
+Turtle.TurnRight()
+Turtle.Move(200)
+EndFor
+Turtle.TurnLeft()
+Turtle.Angle="15"
+Turtle.Move(30)
+Turtle.MoveTo(50,90)

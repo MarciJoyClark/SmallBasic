@@ -1,0 +1,26 @@
+GraphicsWindow.Show()
+Copy= Controls.AddButton("Copy",20,50)
+Exit= Controls.AddButton("Goodbye!",20,20)
+Controls.ButtonClicked=ButtonClick
+
+sourcefilepath = "C:\Users\Student\Desktop\FolderA\FileA.txt"
+destinationfilepath ="C:\Users\Student\Desktop\FolderB\FileA_copy.txt"
+directorypath = "C:\Users\Student\Desktop\FolderB"
+
+Sub ButtonClick
+  If controls.LastClickedButton=Copy then
+    program1()
+    ElseIf controls.LastClickedButton=Exit then
+    GraphicsWindow.ShowMessage("Goodbye!","Goodbye!")
+  EndIf
+EndSub
+
+ Sub program1
+  LT=(Clock.Hour +8)*100
+If (LT <=0900) Then
+  TextWindow.WriteLine("Copy status:" + File.CopyFile(sourcefilepath, destinationfilepath))
+  TextWindow.WriteLine("New file's path:" + File.GetFiles(directorypath))
+ElseIf (LT >=2059) Then
+  TextWindow.WriteLine("Copy failed. London Station is closed.")
+EndIf 
+EndSub

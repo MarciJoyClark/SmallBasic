@@ -1,0 +1,6 @@
+TextWindow.BackgroundColor="black"
+TextWindow.ForegroundColor="white"
+TextWindow.Write("How is the weather where you are today?:")
+TextWindow.CursorTop=10
+weather=TextWindow.Read()
+TextWindow.WriteLine("The weather is "+weather+"? That sounds interesting!")

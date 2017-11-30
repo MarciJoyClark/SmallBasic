@@ -1,0 +1,5 @@
+TextWindow.BackgroundColor="Black" 
+TextWindow.ForegroundColor="Blue"
+TextWindow.Pause()
+TextWindow.WriteLine("Hellooooo Nurse!")
+TextWindow.WriteLine("Figured it out")

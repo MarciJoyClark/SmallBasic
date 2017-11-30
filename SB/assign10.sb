@@ -1,0 +1,15 @@
+GraphicsWindow.Width=500 'This tells the window how wide to be
+GraphicsWindow.Height=500 'This tells it how tall to be
+GraphicsWindow.BackgroundColor="Black" 'This is the background colour of the window
+GraphicsWindow.PenColor="LightGreen" 'This tells the pen which colour to use when making a shape
+GraphicsWindow.PenWidth=1 'This means I want to use a very thin line
+For i=0 To 6.4 Step .17 'This is a "For Loop" and gives the conditions under which you want the program to execute commands
+  x=Math.Sin(i)*100+200 'These two lines are Math codes where the functions are preset, but you can mess with the variables.
+  y=Math.Cos(i)*100+200
+  DrawCircleUsingCenter() 'This means I want to name my subroutine the words before the parenthesis
+  EndFor 'This closes to "For loop"
+  Sub DrawCircleUsingCenter 'This starts the subroutine I named earlier
+    startX=x-40 'These two tell the program what value I want for x and y
+    startY=y-40
+    GraphicsWindow.DrawEllipse(startX,startY, 50, 200) 'This draws the ellipse and tells the program how you want it to look
+    EndSub 'This ends the routine

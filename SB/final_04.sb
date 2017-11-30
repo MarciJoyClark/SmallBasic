@@ -1,0 +1,15 @@
+sourcefilepath = "C:\Users\Student\Desktop\FolderA\FileA.txt"
+destinationfilepath ="C:\Users\Student\Desktop\FolderB\FileA_copy.txt"
+directorypath = "C:\Users\Student\Desktop\FolderB"
+
+LT:
+ Sub program1
+  LT=(Clock.Hour +8)*100
+If (LT <=0900) Then
+  TextWindow.WriteLine("Copy status:" + File.CopyFile(sourcefilepath, destinationfilepath))
+  TextWindow.WriteLine("New file's path:" + File.GetFiles(directorypath))
+ElseIf (LT >=2059) Then
+  TextWindow.WriteLine("Copy status:" + File.CopyFile(sourcefilepath, destinationfilepath))
+  TextWindow.WriteLine("New file's path:" + File.GetFiles(directorypath))
+EndIf 
+EndSub

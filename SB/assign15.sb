@@ -1,0 +1,12 @@
+Flowers["Lilac"]["Color"] = "A soft purple."
+Flowers["Lilac"]["Scent"] = "Sweet!"
+Flowers["Rose"]["Color"] = "Pink and yellow"
+Flowers["Rose"]["Scent"] = "Mellow . . ."
+Flowers["Lavendar"]["Color"] = "Surprise, it's lavendar!"
+Flowers["Lavendar"]["Scent"] = "Relaxing!"
+Flowers["Chamomile"]["Color"] = "White and yellow"
+Flowers["Chamomile"]["Scent"] = "Delicious!"
+TextWindow.Write("I have four flowers - Rose, Lilac, Lavendar, Chamomile - Which one would you want?: ")
+Want= TextWindow.Read()
+TextWindow.WriteLine("This flower is: " + Flowers[Want]["Color"])
+TextWindow.WriteLine("It's scent is really: " + Flowers[Want]["Scent"])

@@ -1,0 +1,14 @@
+TextWindow.Title="Assignment part 3"
+TextWindow.WriteLine("I really hate math. Good thing computers don't!")
+First_number=5
+Second_number=5
+Thirdnumber=50
+TextWindow.Write("I know what 5x5 is! Do you want to know?")
+know=TextWindow.Read()
+TextWindow.WriteLine(know+ "? I'm going to tell you! It's ")
+TextWindow.WriteLine(ThirdNumber)
+TextWindow.WriteLine("It isn't? You're right, it's")
+TextWindow.WriteLine(Math.GetRandomNumber(24))
+TextWindow.WriteLine("Gosh! I'm really silly! That isn't right, either! It's")
+TextWindow.WriteLine(First_number*Second_number)
+TextWindow.Top=50
